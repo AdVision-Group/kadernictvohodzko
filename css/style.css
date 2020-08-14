@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Slab", serif;
+    font-family: "Bilbo Swash Caps", cursive;
+
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
