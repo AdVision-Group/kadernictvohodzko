@@ -81,7 +81,9 @@
     #hours .content {
         width: 100%;
 
-        padding: 40px;
+        padding: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
 
         position: relative;
 
@@ -119,7 +121,7 @@
 
     #hours .content .heading {
         color: white;
-        font-size: 34px;
+        font-size: 28px;
         font-weight: normal;
         font-family: "Roboto Slab", serif;
         text-align: center;

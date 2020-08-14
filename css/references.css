@@ -1,121 +1,245 @@
-#references {
+@media only screen and (min-width: 800px) {
+    #references {
 
+    }
+
+    #references .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        padding: 100px;
+    }
+
+    #references .content .title {
+        color: #DBB859;
+        font-size: 27px;
+        font-weight: normal;
+        font-family: "Bilbo Swash Caps", cursive;
+        text-align: center;
+    }
+
+    #references .content .heading {
+        color: #333333;
+        font-size: 34px;
+        font-weight: normal;
+        font-family: "Roboto Slab", serif;
+        text-align: center;
+
+        margin-bottom: 30px;
+    }
+
+    #references .content .references {
+        width: 800px;
+
+        overflow: hidden;
+    }
+
+    #references .content .references .list {
+        display: flex;
+        flex-direction: row;
+
+        width: 4000px;
+    }
+
+    #references .content .references .list .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 800px;
+
+        opacity: 0;
+        transition: opacity 500ms;
+    }
+
+    #references .content .references .list .item .icon {
+        color: #333333;
+        font-size: 70px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    #references .content .references .list .item .text {
+        color: #333333;
+        font-size: 22px;
+        font-weight: normal;
+        font-family: "Roboto Condensed", sans-serif;
+        text-align: center;
+        line-height: 35px;
+        max-width: 90vw;
+        margin-top: -20px;
+    }
+
+
+    #references .content .references .list .item .stars {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: 20px;
+    }
+
+    #references .content .references .list .item .stars .star {
+        color: #DBB859;
+
+        width: 20px;
+        height: 20px;
+
+        margin: 2px;
+    }
+
+    #references .content .references .list .item .name {
+        color: #333333;
+        font-size: 16px;
+        font-weight: normal;
+        font-family: "Roboto Condensed", sans-serif;
+
+        margin-top: 20px;
+    }
+
+    #references .content .controls {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: 30px;
+    }
+
+    #references .content .controls .button {
+        width: 12px;
+        height: 12px;
+
+        border: 1px solid black;
+        border-radius: 50%;
+
+        margin: 5px;
+
+        cursor: pointer;
+
+        transition: all 500ms;
+    }
 }
 
-#references .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media only screen and (max-width: 800px) {
+    #references {
 
-    width: 100%;
+    }
 
-    padding: 100px;
-    padding-top: 20px;
-}
+    #references .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-#references .content .title {
-    color: #DBB859;
-    font-size: 27px;
-    font-weight: normal;
-    font-family: "Bilbo Swash Caps", cursive;
-    text-align: center;
-}
+        width: 100%;
 
-#references .content .heading {
-    color: #333333;
-    font-size: 34px;
-    font-weight: normal;
-    font-family: "Roboto Slab", serif;
-    text-align: center;
+        padding: 30px;
+    }
 
-    margin-bottom: 30px;
-}
+    #references .content .title {
+        color: #DBB859;
+        font-size: 27px;
+        font-weight: normal;
+        font-family: "Bilbo Swash Caps", cursive;
+        text-align: center;
+    }
 
-#references .content .references {
-    width: 800px;
+    #references .content .heading {
+        color: #333333;
+        font-size: 28px;
+        font-weight: normal;
+        font-family: "Roboto Slab", serif;
+        text-align: center;
 
-    overflow: hidden;
-}
+        margin-bottom: 30px;
+    }
 
-#references .content .references .list {
-    display: flex;
-    flex-direction: row;
+    #references .content .references {
+        width: 800px;
 
-    width: 4000px;
-}
+        overflow: hidden;
+    }
 
-#references .content .references .list .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    #references .content .references .list {
+        display: flex;
+        flex-direction: row;
 
-    width: 800px;
+        width: 4000px;
+    }
 
-    opacity: 0;
-    transition: opacity 500ms;
-}
+    #references .content .references .list .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-#references .content .references .list .item .icon {
-    color: #333333;
-    font-size: 70px;
-    font-weight: normal;
-    text-align: center;
-}
+        width: 800px;
 
-#references .content .references .list .item .text {
-    color: #333333;
-    font-size: 22px;
-    font-weight: normal;
-    font-family: "Roboto Condensed", sans-serif;
-    text-align: center;
-    line-height: 35px;
-    max-width: 90vw;
-    margin-top: -20px;
-}
+        opacity: 0;
+        transition: opacity 500ms;
+    }
+
+    #references .content .references .list .item .icon {
+        color: #333333;
+        font-size: 70px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    #references .content .references .list .item .text {
+        color: #333333;
+        font-size: 22px;
+        font-weight: normal;
+        font-family: "Roboto Condensed", sans-serif;
+        text-align: center;
+        line-height: 35px;
+        max-width: 90vw;
+        margin-top: -20px;
+    }
 
 
-#references .content .references .list .item .stars {
-    display: flex;
-    flex-direction: row;
+    #references .content .references .list .item .stars {
+        display: flex;
+        flex-direction: row;
 
-    margin-top: 20px;
-}
+        margin-top: 20px;
+    }
 
-#references .content .references .list .item .stars .star {
-    color: #DBB859;
+    #references .content .references .list .item .stars .star {
+        color: #DBB859;
 
-    width: 20px;
-    height: 20px;
+        width: 20px;
+        height: 20px;
 
-    margin: 2px;
-}
+        margin: 2px;
+    }
 
-#references .content .references .list .item .name {
-    color: #333333;
-    font-size: 16px;
-    font-weight: normal;
-    font-family: "Roboto Condensed", sans-serif;
+    #references .content .references .list .item .name {
+        color: #333333;
+        font-size: 16px;
+        font-weight: normal;
+        font-family: "Roboto Condensed", sans-serif;
 
-    margin-top: 20px;
-}
+        margin-top: 20px;
+    }
 
-#references .content .controls {
-    display: flex;
-    flex-direction: row;
+    #references .content .controls {
+        display: flex;
+        flex-direction: row;
 
-    margin-top: 30px;
-}
+        margin-top: 30px;
+    }
 
-#references .content .controls .button {
-    width: 12px;
-    height: 12px;
+    #references .content .controls .button {
+        width: 12px;
+        height: 12px;
 
-    border: 1px solid black;
-    border-radius: 50%;
+        border: 1px solid black;
+        border-radius: 50%;
 
-    margin: 5px;
+        margin: 5px;
 
-    cursor: pointer;
+        cursor: pointer;
 
-    transition: all 500ms;
+        transition: all 500ms;
+    }
 }

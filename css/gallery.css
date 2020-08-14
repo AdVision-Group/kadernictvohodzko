@@ -1,102 +1,210 @@
-#gallery {
+@media only screen and (min-width: 800px) {
+    #gallery {
 
-}
+    }
 
-#gallery .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    #gallery .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    width: 100%;
+        width: 100%;
 
-    padding: 100px;
-}
+        padding: 100px;
+        padding-bottom: 30px;
+    }
 
-#gallery .content .title {
-    color: #DBB859;
-    font-size: 27px;
-    font-weight: normal;
-    font-family: "Bilbo Swash Caps", cursive;
-    text-align: center;
-}
+    #gallery .content .title {
+        color: #DBB859;
+        font-size: 27px;
+        font-weight: normal;
+        font-family: "Bilbo Swash Caps", cursive;
+        text-align: center;
+    }
 
-#gallery .content .heading {
-    color: #333333;
-    font-size: 34px;
-    font-weight: normal;
-    font-family: "Roboto Slab", serif;
-    text-align: center;
+    #gallery .content .heading {
+        color: #333333;
+        font-size: 34px;
+        font-weight: normal;
+        font-family: "Roboto Slab", serif;
+        text-align: center;
 
-    margin-bottom: 30px;
-}
+        margin-bottom: 30px;
+    }
 
-#gallery .content .gallery {
-    width: 1200px;
-    height: 250px;
+    #gallery .content .gallery {
+        width: 1200px;
+        height: 250px;
 
-    overflow: hidden;
-}
+        overflow: hidden;
+    }
 
-#gallery .content .gallery .slides {
-    display: flex;
-    flex-direction: row;
-
-    width: 8400px;
-    height: 250px;
-
-    margin-left: 0;
-
-    transition: all 800ms;
-}
-
-@media(max-width:900px){
     #gallery .content .gallery .slides {
-        margin-left: 400px;
+        display: flex;
+        flex-direction: row;
+
+        width: 8400px;
+        height: 250px;
+
+        margin-left: 0;
+
+        transition: all 800ms;
+    }
+
+    @media(max-width:900px){
+        #gallery .content .gallery .slides {
+            margin-left: 400px;
+        }
+    }
+
+    #gallery .content .gallery .slides .slide {
+        width: 360px;
+        height: 250px;
+
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    #gallery .content .gallery .slides .slide .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #gallery .content .controls {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    #gallery .content .controls .button {
+        width: 35px;
+        height: 5px;
+
+        margin: 6px;
+
+        background-color: lightgray;
+
+        cursor: pointer;
+        
+        transition: all 300ms;
+    }
+
+    .button.mobile{
+        display: none;
+    }
+
+    @media(max-width:900px){
+        .button.mobile{
+            display: block;
+        }
     }
 }
 
-#gallery .content .gallery .slides .slide {
-    width: 360px;
-    height: 250px;
+@media only screen and (max-width: 800px) {
+    #gallery {
 
-    margin-right: 20px;
-    margin-left: 20px;
-}
+    }
 
-#gallery .content .gallery .slides .slide .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    #gallery .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-#gallery .content .controls {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
+        width: 100%;
 
-#gallery .content .controls .button {
-    width: 35px;
-    height: 5px;
+        padding: 40px;
+    }
 
-    margin: 6px;
+    #gallery .content .title {
+        color: #DBB859;
+        font-size: 27px;
+        font-weight: normal;
+        font-family: "Bilbo Swash Caps", cursive;
+        text-align: center;
+    }
 
-    background-color: lightgray;
+    #gallery .content .heading {
+        color: #333333;
+        font-size: 28px;
+        font-weight: normal;
+        font-family: "Roboto Slab", serif;
+        text-align: center;
 
-    cursor: pointer;
-    
-    transition: all 300ms;
-}
+        margin-bottom: 50px;
+    }
 
-.button.mobile{
-    display: none;
-}
+    #gallery .content .gallery {
+        width: 1200px;
+        height: 250px;
 
-@media(max-width:900px){
+        overflow: hidden;
+    }
+
+    #gallery .content .gallery .slides {
+        display: flex;
+        flex-direction: row;
+
+        width: 8400px;
+        height: 250px;
+
+        margin-left: 0;
+
+        transition: all 800ms;
+    }
+
+    @media(max-width:900px){
+        #gallery .content .gallery .slides {
+            margin-left: 400px;
+        }
+    }
+
+    #gallery .content .gallery .slides .slide {
+        width: 360px;
+        height: 250px;
+
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    #gallery .content .gallery .slides .slide .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #gallery .content .controls {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    #gallery .content .controls .button {
+        width: 35px;
+        height: 5px;
+
+        margin: 6px;
+
+        background-color: lightgray;
+
+        cursor: pointer;
+        
+        transition: all 300ms;
+    }
+
     .button.mobile{
-        display: block;
+        display: none;
+    }
+
+    @media(max-width:900px){
+        .button.mobile{
+            display: block;
+        }
     }
 }

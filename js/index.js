@@ -1,30 +1,34 @@
 
+var mobileMenuShowing = false;
+
 //header animation
 
 function animateHeader() {
-    var offset = window.pageYOffset;
+    if (!mobileMenuShowing) {
+        var offset = window.pageYOffset;
 
-    if (offset > 100) {
-        document.getElementById("header").childNodes[1].style.backgroundColor = "rgb(35, 35, 35)";
-        document.getElementById("header").childNodes[1].style.padding = "10px";
-        document.getElementById("header").childNodes[1].style.paddingRight = "30px";
+        if (offset > 100) {
+            document.getElementById("header").childNodes[1].style.backgroundColor = "rgb(35, 35, 35)";
+            document.getElementById("header").childNodes[1].style.padding = "10px";
+            document.getElementById("header").childNodes[1].style.paddingRight = "30px";
 
-        // color of menu items
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[3].style.color = "white";
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[5].style.color = "white";
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[7].style.color = "white";
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[9].style.color = "white";
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[11].style.color = "white";
-    } else {
-        document.getElementById("header").childNodes[1].style.backgroundColor = "transparent";
-        document.getElementById("header").childNodes[1].style.padding = "30px";
+            // color of menu items
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[3].style.color = "white";
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[5].style.color = "white";
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[7].style.color = "white";
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[9].style.color = "white";
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[11].style.color = "white";
+        } else {
+            document.getElementById("header").childNodes[1].style.backgroundColor = "transparent";
+            document.getElementById("header").childNodes[1].style.padding = "30px";
 
-        // color of menu items
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[3].style.color = "rgb(200, 200, 200)";
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[5].style.color = "rgb(200, 200, 200)";
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[7].style.color = "rgb(200, 200, 200)";
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[9].style.color = "rgb(200, 200, 200)";
-        document.getElementById("header").childNodes[1].childNodes[3].childNodes[11].style.color = "rgb(200, 200, 200)";
+            // color of menu items
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[3].style.color = "rgb(200, 200, 200)";
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[5].style.color = "rgb(200, 200, 200)";
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[7].style.color = "rgb(200, 200, 200)";
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[9].style.color = "rgb(200, 200, 200)";
+            document.getElementById("header").childNodes[1].childNodes[3].childNodes[11].style.color = "rgb(200, 200, 200)";
+        }
     }
 }
 
@@ -223,14 +227,82 @@ window.onscroll = function () {
 
 //links scrolling
 
+function smoothScroll(button) {
+    $(button).on("click", function (e) {
+        if ("" !== this.hash) {
+            e.preventDefault();
+            var offset = $(this).hasClass('home') ? 0 : -80;
+            //var offset = -document.getElementById("header").offsetHeight + 2;
+            var t = this.hash;
+            $("html, body").animate({
+                scrollTop: $(t).offset().top + offset
+            }, 800, function () {})
+        }
+    })
+}
 
-$(".menu-item").on("click", function (e) {
-    if ("" !== this.hash) {
-        e.preventDefault();
-        var offset = $(this).hasClass('home') ? 0 : -80;
-        var t = this.hash;
-        $("html, body").animate({
-            scrollTop: $(t).offset().top + offset
-        }, 800, function () {})
+function smoothScrollMobileMenu(button) {
+    $(button).on("click", function (e) {
+        if ("" !== this.hash) {
+            e.preventDefault();
+            var offset = $(this).hasClass('home') ? 0 : -80;
+            //var offset = -document.getElementById("header").offsetHeight + 2;
+            var t = this.hash;
+
+            hideMenu();
+
+            setTimeout(function() {
+                $("html, body").animate({
+                    scrollTop: $(t).offset().top + offset
+                }, 800, function () {})
+            }, 300);
+        }
+    })
+}
+
+smoothScroll("#header .content .menu .menu-item");
+smoothScroll("#home .content .button");
+smoothScrollMobileMenu("#mobile-menu .content .mobile-menu-item");
+
+function showMenu() {
+    var offset = window.pageYOffset;
+
+    if (offset <= 100) {
+        document.getElementById("header").childNodes[1].style.backgroundColor = "rgb(35, 35, 35)";
     }
-})
+
+    document.getElementById("mobile-menu").style.right = "0";
+    document.getElementById("mobile-menu").style.top = document.getElementById("header").offsetHeight - 1 + "px";
+
+    document.getElementById("mobile-menu-button").setAttribute("onclick", "hideMenu()");
+
+    mobileMenuShowing = true;
+}
+
+function hideMenu() {
+    var offset = window.pageYOffset;
+
+    if (offset <= 100) {
+        document.getElementById("header").childNodes[1].style.backgroundColor = "transparent";
+    }
+
+    document.getElementById("mobile-menu").style.right = "-100%";
+
+    document.getElementById("mobile-menu-button").setAttribute("onclick", "showMenu()");
+
+    mobileMenuShowing = false;
+}
+
+function showPricing() {
+    document.getElementById("pricing").style.display = "flex";
+    setTimeout(function() {
+        document.getElementById("pricing").style.opacity = "1";
+    }, 1);
+}
+
+function hidePricing() {
+    document.getElementById("pricing").style.opacity = "0";
+    setTimeout(function() {
+        document.getElementById("pricing").style.display = "none";
+    }, 500);
+}

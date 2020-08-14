@@ -1,32 +1,67 @@
-#footer {
+@media only screen and (min-width: 700px) {
+    #footer {
 
+    }
+
+    #footer .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+
+        padding: 20px;
+        padding-right: 100px;
+        padding-left: 100px;
+        
+        background-color: #333333;
+    }
+
+    #footer .content .company {
+        color: white;
+        font-size: 15px;
+        font-weight: normal;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+
+    #footer .content .icon {
+        width: 25px;
+        height: 25px;
+
+        color: white;
+    }
 }
 
-#footer .content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+@media only screen and (max-width: 700px) {
+    #footer {
 
-    width: 100%;
+    }
 
-    padding: 20px;
-    padding-right: 100px;
-    padding-left: 100px;
-    
-    background-color: #333333;
-}
+    #footer .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-#footer .content .company {
-    color: white;
-    font-size: 15px;
-    font-weight: normal;
-    font-family: "Roboto Condensed", sans-serif;
-}
+        width: 100%;
 
-#footer .content .icon {
-    width: 25px;
-    height: 25px;
+        padding: 20px;
+        
+        background-color: #333333;
+    }
 
-    color: white;
+    #footer .content .company {
+        color: white;
+        font-size: 15px;
+        font-weight: normal;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+
+    #footer .content .icon {
+        width: 25px;
+        height: 25px;
+
+        color: white;
+    }
 }

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1100px) {
     #services {
 
     }
@@ -24,7 +24,12 @@
         transition: opacity 300ms;
     }
 
-    #services .content .list .item {
+    #services .content .list .service-panel {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #services .content .list .service-panel .item {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,13 +44,13 @@
         transition: all 300ms;
     }
 
-    #services .content .list .item .icon {
+    #services .content .list .service-panel .item .icon {
         width: 60%;
 
         margin-bottom: 40px;
     }
 
-    #services .content .list .item .title {
+    #services .content .list .service-panel .item .title {
         color: #333333;
         font-size: 22px;
         font-weight: normal;
@@ -53,7 +58,7 @@
         text-align: center;
     }
 
-    #services .content .list .item:hover {
+    #services .content .list .service-panel .item:hover {
         background-color: rgb(245, 245, 245);
     }
 
@@ -83,7 +88,7 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) and (min-width: 700px) {
     #services {
 
     }
@@ -95,21 +100,26 @@
 
         width: 100%;
 
-        padding: 50px;
+        padding: 100px;
 
         background-color: rgb(240, 240, 240);
     }
 
     #services .content .list {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
         opacity: 0;
 
         transition: opacity 300ms;
     }
 
-    #services .content .list .item {
+    #services .content .list .service-panel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #services .content .list .service-panel .item {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -124,13 +134,13 @@
         transition: all 300ms;
     }
 
-    #services .content .list .item .icon {
+    #services .content .list .service-panel .item .icon {
         width: 60%;
 
         margin-bottom: 40px;
     }
 
-    #services .content .list .item .title {
+    #services .content .list .service-panel .item .title {
         color: #333333;
         font-size: 22px;
         font-weight: normal;
@@ -138,7 +148,97 @@
         text-align: center;
     }
 
-    #services .content .list .item:hover {
+    #services .content .list .service-panel .item:hover {
+        background-color: rgb(245, 245, 245);
+    }
+
+    #services .content .button {
+        color: white;
+        font-size: 18px;
+        font-weight: normal;
+        font-family: "Roboto Condensed", sans-serif;
+
+        padding: 20px;
+        padding-right: 50px;
+        padding-left: 50px;
+
+        margin-top: 30px;
+
+        background-color: #DBB859;
+        
+        z-index: 2;
+        
+        cursor: pointer;
+        transition: all 250ms;
+    }
+
+    #services .content .button:hover {
+        transform: rotateX(-20deg);
+        box-shadow: 0px 7px 0px 0px #aa8e40;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    #services {
+
+    }
+
+    #services .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        padding: 30px;
+
+        background-color: rgb(240, 240, 240);
+    }
+
+    #services .content .list {
+        display: flex;
+        flex-direction: column;
+
+        opacity: 0;
+
+        transition: opacity 300ms;
+    }
+
+    #services .content .list .service-panel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #services .content .list .service-panel .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+
+        padding: 50px;
+        margin: 10px;
+
+        box-shadow: 0px 0px 30px 0px lightgray;
+        background-color: white;
+
+        transition: all 300ms;
+    }
+
+    #services .content .list .service-panel .item .icon {
+        width: 60%;
+
+        margin-bottom: 40px;
+    }
+
+    #services .content .list .service-panel .item .title {
+        color: #333333;
+        font-size: 22px;
+        font-weight: normal;
+        font-family: "Roboto Slab", serif;
+        text-align: center;
+    }
+
+    #services .content .list .service-panel .item:hover {
         background-color: rgb(245, 245, 245);
     }
 

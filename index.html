@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="sk">
     <head>
+        <title>Kaderníctvo Hodžko</title>
+
         <meta charset="UTF-8">
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +10,7 @@
         
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/header.css" />
+        <link rel="stylesheet" type="text/css" href="css/mobilemenu.css" />
         <link rel="stylesheet" type="text/css" href="css/home.css" />
         <link rel="stylesheet" type="text/css" href="css/about.css" />
         <link rel="stylesheet" type="text/css" href="css/services.css" />
@@ -17,6 +20,7 @@
         <link rel="stylesheet" type="text/css" href="css/references.css" />
         <link rel="stylesheet" type="text/css" href="css/contact.css" />
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
+        <link rel="stylesheet" type="text/css" href="css/pricing.css" />
     </head>
 
     <body>
@@ -32,6 +36,21 @@
                     <a href='#references'class="menu-item" id="menu-item-4">Referencie<div class="underline" id="underline-4"></div></a>
                     <a href='#contact' class="menu-item" id="menu-item-5">Kontakt<div class="underline" id="underline-5"></div></a>
                 </div>
+
+                <div class="mobile-menu-button" id="mobile-menu-button" onclick="showMenu()">
+                    <ion-icon class="icon" name="menu-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu">
+            <div class="content">
+                <a href="#home" class="mobile-menu-item"><ion-icon class="icon" name="home"></ion-icon>Úvod</a>
+                <a href="#services" class="mobile-menu-item"><ion-icon class="icon" name="wallet"></ion-icon>Cenník</a>
+                <a href="#team" class="mobile-menu-item"><ion-icon class="icon" name="people"></ion-icon>Náš tím</a>
+                <a href="#gallery" class="mobile-menu-item"><ion-icon class="icon" name="images"></ion-icon>Galéria</a>
+                <a href="#references" class="mobile-menu-item"><ion-icon class="icon" name="document"></ion-icon>Referencie</a>
+                <a href="#contact" class="mobile-menu-item"><ion-icon class="icon" name="person"></ion-icon>Kontakt</a>
             </div>
         </div>
 
@@ -44,7 +63,7 @@
                 <div class="line"></div>
                 <div class="description">Podchod Hodžovo námestie, Bratislava</div>
 
-                <div class="button">Kontakt</div>
+                <a href="#contact" class="button">Kontakt</a>
             </div>
         </div>
 
@@ -71,25 +90,29 @@
         <div id="services">
             <div class="content">
                 <div class="list" id="service-list">
-                    <div class="item" id="service-1">
-                        <img class="icon" src="assets/icon-4.svg" />
-                        <div class="title">Strihanie</div>
+                    <div class="service-panel">
+                        <div class="item" id="service-1" onclick="showPricing()">
+                            <img class="icon" src="assets/icon-4.svg" />
+                            <div class="title">Strihanie</div>
+                        </div>
+                        <div class="item" id="service-2" onclick="showPricing()">
+                            <img class="icon" src="assets/icon-3.svg" />
+                            <div class="title">Umývanie</div>
+                        </div>
                     </div>
-                    <div class="item" id="service-2">
-                        <img class="icon" src="assets/icon-3.svg" />
-                        <div class="title">Umývanie</div>
-                    </div>
-                    <div class="item" id="service-3">
-                        <img class="icon" src="assets/icon-2.svg" />
-                        <div class="title">Úprava brady</div>
-                    </div>
-                    <div class="item" id="service-4">
-                        <img class="icon" src="assets/icon-1.svg" />
-                        <div class="title">Skrátenie fúzov</div>
+                    <div class="service-panel">
+                        <div class="item" id="service-3" onclick="showPricing()">
+                            <img class="icon" src="assets/icon-2.svg" />
+                            <div class="title">Úprava brady</div>
+                        </div>
+                        <div class="item" id="service-4" onclick="showPricing()">
+                            <img class="icon" src="assets/icon-1.svg" />
+                            <div class="title">Skrátenie fúzov</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="button">Cenník</div>
+                <div class="button" onclick="showPricing()">Cenník</div>
             </div>
         </div>
 
@@ -320,6 +343,10 @@
                 <div class="company">© 2020 Kaderníctvo Hodžko.</div>
                 <ion-icon class="icon" name="logo-facebook"></ion-icon>
             </div>
+        </div>
+
+        <div id="pricing" onclick="hidePricing()">
+            <img class="image" src="assets/cennik-1.png" />
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

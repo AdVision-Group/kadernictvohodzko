@@ -82,7 +82,7 @@
         display: flex;
         flex-direction: column;
 
-        padding: 40px;
+        padding: 30px;
 
         width: 100%;
     }
@@ -107,7 +107,7 @@
 
     #team .content .info-panel .heading {
         color: #333333;
-        font-size: 34px;
+        font-size: 28px;
         font-weight: normal;
         font-family: "Roboto Slab", serif;
         text-align: center;
