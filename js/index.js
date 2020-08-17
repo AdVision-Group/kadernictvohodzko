@@ -306,3 +306,20 @@ function hidePricing() {
         document.getElementById("pricing").style.display = "none";
     }, 500);
 }
+
+function showImage(image) {
+    document.getElementById("gallery-image-panel").style.display = "flex";
+    document.getElementById("gallery-image").src = image;
+
+    document.getElementById("gallery-image").style.display = "inline-block";
+    setTimeout(function() {
+        document.getElementById("gallery-image-panel").style.opacity = "1";
+    }, 1);
+}
+
+function hideImage() {
+    document.getElementById("gallery-image-panel").style.opacity = "0";
+    setTimeout(function() {
+        document.getElementById("gallery-image-panel").style.display = "none";
+    }, 300);
+}
